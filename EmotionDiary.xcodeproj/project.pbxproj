@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		86BB73B72A58608D00E798D2 /* EmotionDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BB73B62A58608D00E798D2 /* EmotionDiaryApp.swift */; };
-		86BB73B92A58608D00E798D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BB73B82A58608D00E798D2 /* ContentView.swift */; };
+		86BB73B92A58608D00E798D2 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BB73B82A58608D00E798D2 /* DiaryListView.swift */; };
 		86BB73BB2A58608E00E798D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BB73BA2A58608E00E798D2 /* Assets.xcassets */; };
 		86BB73BE2A58608E00E798D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BB73BD2A58608E00E798D2 /* Preview Assets.xcassets */; };
 		86BB73C82A58608E00E798D2 /* EmotionDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BB73C72A58608E00E798D2 /* EmotionDiaryTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		86BB73B32A58608D00E798D2 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BB73B62A58608D00E798D2 /* EmotionDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDiaryApp.swift; sourceTree = "<group>"; };
-		86BB73B82A58608D00E798D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86BB73B82A58608D00E798D2 /* DiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
 		86BB73BA2A58608E00E798D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86BB73BD2A58608E00E798D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86BB73C32A58608E00E798D2 /* EmotionDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				86BB73B62A58608D00E798D2 /* EmotionDiaryApp.swift */,
-				86BB73B82A58608D00E798D2 /* ContentView.swift */,
+				86BB73E02A5860AC00E798D2 /* Diary List */,
 				86BB73BA2A58608E00E798D2 /* Assets.xcassets */,
 				86BB73BC2A58608E00E798D2 /* Preview Content */,
 			);
@@ -125,6 +125,14 @@
 				86BB73D32A58608E00E798D2 /* EmotionDiaryUITestsLaunchTests.swift */,
 			);
 			path = EmotionDiaryUITests;
+			sourceTree = "<group>";
+		};
+		86BB73E02A5860AC00E798D2 /* Diary List */ = {
+			isa = PBXGroup;
+			children = (
+				86BB73B82A58608D00E798D2 /* DiaryListView.swift */,
+			);
+			path = "Diary List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86BB73B92A58608D00E798D2 /* ContentView.swift in Sources */,
+				86BB73B92A58608D00E798D2 /* DiaryListView.swift in Sources */,
 				86BB73B72A58608D00E798D2 /* EmotionDiaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
