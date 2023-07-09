@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861A76752A5AA45200A24696 /* MoodDiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861A76742A5AA45200A24696 /* MoodDiaryCell.swift */; };
 		86BB73B72A58608D00E798D2 /* EmotionDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BB73B62A58608D00E798D2 /* EmotionDiaryApp.swift */; };
 		86BB73B92A58608D00E798D2 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BB73B82A58608D00E798D2 /* DiaryListView.swift */; };
 		86BB73BB2A58608E00E798D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BB73BA2A58608E00E798D2 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		861A76742A5AA45200A24696 /* MoodDiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryCell.swift; sourceTree = "<group>"; };
 		86BB73B32A58608D00E798D2 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BB73B62A58608D00E798D2 /* EmotionDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDiaryApp.swift; sourceTree = "<group>"; };
 		86BB73B82A58608D00E798D2 /* DiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				86BB73B82A58608D00E798D2 /* DiaryListView.swift */,
+				861A76742A5AA45200A24696 /* MoodDiaryCell.swift */,
 			);
 			path = "Diary List";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				86BB73E42A5860DC00E798D2 /* DiaryDetailView.swift in Sources */,
 				86BB73E92A58610900E798D2 /* DiaryMoodInputView.swift in Sources */,
+				861A76752A5AA45200A24696 /* MoodDiaryCell.swift in Sources */,
 				86BB73E72A58610200E798D2 /* DiaryDateInputView.swift in Sources */,
 				86BB73EE2A58614A00E798D2 /* Mood.swift in Sources */,
 				86BB73B92A58608D00E798D2 /* DiaryListView.swift in Sources */,
