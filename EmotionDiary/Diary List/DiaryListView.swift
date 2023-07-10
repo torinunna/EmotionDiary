@@ -33,7 +33,7 @@ struct DiaryListView: View {
                         }
                     } header: {
                         Text(formattedSectionTitle(key))
-                            .font(.system(size: 25))
+                            .font(.system(size: 25, weight: .bold))
                     }
                     .frame(height: 60)
                 }
