@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DiaryDetailView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var diary: MoodDiary
     
     var body: some View {
@@ -22,6 +24,7 @@ struct DiaryDetailView: View {
                 .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 0)
             Text(diary.text)
                 .font(.system(size: 20, weight: .medium))
+                .foregroundColor(colorScheme == .dark ? .white : .black)
         }
     }
 }
