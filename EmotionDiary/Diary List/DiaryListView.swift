@@ -20,22 +20,23 @@ struct DiaryListView: View {
     ]
     
     var body: some View {
-        
-        LazyVGrid(columns: layout) {
-            ForEach(vm.keys, id:\.self) {
-                key in
-                Section {
-                    let items = vm.dic[key] ?? []
-                    let orderedItems = items.sorted(by: { $0.date < $1.date })
-                    ForEach(orderedItems) {
-                        item in MoodDiaryCell(diary: item)
-                            .frame(height: 50)
+        ScrollView {
+            LazyVGrid(columns: layout) {
+                ForEach(vm.keys, id:\.self) {
+                    key in
+                    Section {
+                        let items = vm.dic[key] ?? []
+                        let orderedItems = items.sorted(by: { $0.date < $1.date })
+                        ForEach(orderedItems) {
+                            item in MoodDiaryCell(diary: item)
+                                .frame(height: 50)
+                        }
+                    } header: {
+                        Text(formattedSectionTitle(key))
+                            .font(.system(size: 25))
                     }
-                } header: {
-                    Text(formattedSectionTitle(key))
-                        .font(.system(size: 25))
+                    .frame(height: 60)
                 }
-                .frame(height: 60)
             }
         }
     }
