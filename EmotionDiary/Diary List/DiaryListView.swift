@@ -32,10 +32,29 @@ struct DiaryListView: View {
                             .frame(height: 50)
                     }
                 } header: {
-                    Text(key)
+                    Text(formattedSectionTitle(key))
                 }
             }
         }
+    }
+}
+
+extension DiaryListView {
+    private func formattedSectionTitle(_ id: String) -> String {
+        let dateComponents = id
+            .components(separatedBy: "-")
+            .compactMap{ Int($0) }
+        guard let year = dateComponents.first, let month = dateComponents.last else {
+            return id
+        }
+        
+        let calendar = Calendar(identifier: .gregorian)
+        let dateComponent = DateComponents(calendar: calendar, year: year, month: month)
+        let date = dateComponent.date!
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 MMMM"
+        return formatter.string(from: date)
     }
 }
 
