@@ -30,8 +30,13 @@ struct DiaryListView: View {
                                 let items = vm.dic[key] ?? []
                                 let orderedItems = items.sorted(by: { $0.date < $1.date })
                                 ForEach(orderedItems) {
-                                    item in MoodDiaryCell(diary: item)
-                                        .frame(height: 50)
+                                    item in
+                                    NavigationLink {
+                                        DiaryDetailView(diary: item)
+                                    } label: {
+                                        MoodDiaryCell(diary: item)
+                                            .frame(height: 50)
+                                    }
                                 }
                             } header: {
                                 Text(formattedSectionTitle(key))
