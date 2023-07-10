@@ -16,7 +16,7 @@ struct DiaryDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 50) {
-                Text(diary.date)
+                Text(formattedDate(dateString: diary.date))
                     .font(.system(size: 30, weight: .bold))
                 Image(systemName: diary.mood.imageName)
                     .renderingMode(.original)
@@ -29,6 +29,18 @@ struct DiaryDetailView: View {
                     .foregroundColor(colorScheme == .dark ? .white : .black)
             }
         }
+    }
+}
+
+extension DiaryDetailView {
+    private func formattedDate(dateString: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        
+        let date = formatter.date(from: dateString)
+
+        formatter.dateFormat = "yyyy년 MMM d일"
+        return formatter.string(from: date!)
     }
 }
 
