@@ -66,7 +66,8 @@ struct DiaryListView: View {
             .navigationTitle("Emotion Diary")
         }
         .sheet(isPresented: $isPresenting) {
-            DiaryDateInputView()
+            let vm = DiaryViewModel(isPresented: $isPresenting)
+            DiaryDateInputView(vm: vm)
         }
     }
 }
