@@ -50,4 +50,10 @@ final class DiaryViewModel: ObservableObject {
     func update(text: String) {
         self.diary.text = text
     }
+    
+    func completed() {
+        guard diary.date.isEmpty == false else { return }
+        print("전체 리스트 추가")
+        isPresented.wrappedValue = false
+    }
 }

@@ -17,6 +17,17 @@ struct DiaryTextInputView: View {
             TextEditor(text: $vm.text)
                 .focused($focused)
                 .border(.gray.opacity(0.2), width: 2)
+            
+            Button {
+                vm.completed()
+            } label: {
+                Text("SAVE")
+                    .frame(width: 150, height: 60)
+                    .foregroundColor(.white)
+                    .background(Color.pink)
+                    .cornerRadius(40)
+            }
+            
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
