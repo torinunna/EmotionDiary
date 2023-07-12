@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct DiaryTextInputView: View {
+    
+    @ObservedObject var vm: DiaryViewModel
+    @FocusState var focused: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextEditor(text: $vm.text)
+                .focused($focused)
+                .border(.gray.opacity(0.2), width: 2)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.focused = true
+            }
+        }
+        .padding()
     }
 }
 
 struct DiaryTextInputView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryTextInputView()
+        DiaryTextInputView(vm: DiaryViewModel(isPresented: .constant(false)))
     }
 }
