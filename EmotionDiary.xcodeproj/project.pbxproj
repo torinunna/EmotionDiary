@@ -169,8 +169,8 @@
 		86BB73EC2A58611300E798D2 /* Diary Creation */ = {
 			isa = PBXGroup;
 			children = (
-				86BB73E62A58610200E798D2 /* DiaryDateInputView.swift */,
 				861A76782A5D2BEB00A24696 /* DiaryViewModel.swift */,
+				86BB73E62A58610200E798D2 /* DiaryDateInputView.swift */,
 				86BB73E82A58610900E798D2 /* DiaryMoodInputView.swift */,
 				86BB73EA2A58610F00E798D2 /* DiaryTextInputView.swift */,
 			);
