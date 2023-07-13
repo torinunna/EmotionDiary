@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiaryListView: View {
     
-    @State var vm: DiaryListViewModel
+    @StateObject var vm: DiaryListViewModel
     @State var isPresenting: Bool = false
     
     let layout: [GridItem] = [
@@ -66,8 +66,11 @@ struct DiaryListView: View {
             .navigationTitle("Emotion Diary")
         }
         .sheet(isPresented: $isPresenting) {
-            let vm = DiaryViewModel(isPresented: $isPresenting)
+            let vm = DiaryViewModel(isPresented: $isPresenting, diaryList: $vm.list)
             DiaryDateInputView(vm: vm)
+        }
+        .onAppear {
+            vm.fetch()
         }
     }
 }
@@ -93,6 +96,6 @@ extension DiaryListView {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryListView(vm: DiaryListViewModel())
+        DiaryListView(vm: DiaryListViewModel(storage: MoodDiaryStorage()))
     }
 }
