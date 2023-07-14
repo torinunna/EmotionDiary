@@ -19,6 +19,7 @@ final class DiaryListViewModel: ObservableObject {
     
     init(storage: MoodDiaryStorage) {
         self.storage = storage
+        bind()
     }
     
     var keys: [String] {
@@ -39,6 +40,5 @@ final class DiaryListViewModel: ObservableObject {
     
     func fetch() {
         self.list = storage.fetch()
-        bind()
     }
 }
