@@ -35,7 +35,7 @@ struct DiaryDetailView: View {
             
             HStack {
                 Button {
-                    print("Delete button pressed")
+                    vm.delete()
                 } label: {
                     Image(systemName: "trash")
                         .renderingMode(.template)

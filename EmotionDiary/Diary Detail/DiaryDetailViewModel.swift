@@ -17,4 +17,8 @@ final class DiaryDetailViewModel: ObservableObject {
         self.diaryList = diaryList
         self.diary = diary
     }
+    
+    func delete() {
+        diaryList.wrappedValue = diaryList.wrappedValue.filter { $0.id != diary.id }
+    }
 }
