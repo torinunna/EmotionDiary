@@ -29,6 +29,7 @@ struct DiaryDetailView: View {
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(colorScheme == .dark ? .white : .black)
                 }
+                .frame(maxWidth: .infinity)
             }
             
             Spacer()
