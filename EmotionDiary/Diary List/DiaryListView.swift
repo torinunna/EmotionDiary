@@ -37,7 +37,6 @@ struct DiaryListView: View {
                                         DiaryDetailView(vm: vm)
                                     } label: {
                                         MoodDiaryCell(diary: item)
-                                            .frame(height: 50)
                                     }
                                 }
                             } header: {
