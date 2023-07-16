@@ -23,7 +23,12 @@ final class DiaryListViewModel: ObservableObject {
     }
     
     var keys: [String] {
-        return dic.keys.sorted { $0 < $1 }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM"
+        
+        return dic.keys.sorted { dateString1, dateString2 in
+            formatter.date(from: dateString1)! < formatter.date(from: dateString2)!
+        }
     }
     
     private func bind() {
