@@ -26,6 +26,7 @@ struct MoodDiaryCell: View {
             Text(formattedDate(dateString: diary.date))
                 .foregroundColor(colorScheme == .dark ? .white : .black)
         }
+        .frame(height: 80)
     }
     
     private func formattedDate(dateString: String) -> String {

@@ -43,7 +43,6 @@ struct DiaryListView: View {
                                 Text(formattedSectionTitle(key))
                                     .font(.system(size: 25, weight: .bold))
                             }
-                            .frame(height: 60)
                             .padding()
                         }
                     }
